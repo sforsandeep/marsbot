@@ -1,5 +1,5 @@
 namespace Marsbot;
-// Direction enum with rotation logic
+// Enum for robot direction
 public enum Direction
 {
     North = 0,
@@ -8,18 +8,22 @@ public enum Direction
     West = 3
 }
 
+// Helper methods for working with directions: turning, moving, and converting
 public static class DirectionExtensions
 {
+    // Turn left (counterclockwise)
     public static Direction TurnLeft(this Direction direction)
     {
         return (Direction)(((int)direction + 3) % 4);
     }
 
+    // Turn right (clockwise)
     public static Direction TurnRight(this Direction direction)
     {
         return (Direction)(((int)direction + 1) % 4);
     }
 
+    // Get the next position if moving forward in the current direction
     public static Position GetForwardPosition(this Direction direction, Position current)
     {
         return direction switch
@@ -32,6 +36,7 @@ public static class DirectionExtensions
         };
     }
 
+    // Convert direction to its character representation
     public static char ToChar(this Direction direction)
     {
         return direction switch
@@ -44,6 +49,7 @@ public static class DirectionExtensions
         };
     }
 
+    // Convert a character to a Direction enum value
     public static Direction FromChar(char c)
     {
         return c switch

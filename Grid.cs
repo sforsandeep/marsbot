@@ -14,26 +14,20 @@ public class Grid
         _scents = new HashSet<Position>();
     }
 
-    /// <summary>
-    /// Checks if a position is within the grid boundaries
-    /// </summary>
+    // Returns true if the position is inside the grid
     public bool IsWithinBounds(Position position)
     {
         return position.X >= 0 && position.X <= _upperRight.X &&
                position.Y >= 0 && position.Y <= _upperRight.Y;
     }
 
-    /// <summary>
-    /// Marks a position as having robot scent (where a robot was lost)
-    /// </summary>
+    // Adds a scent at the given position (where a robot was lost)
     public void AddScent(Position position)
     {
         _scents.Add(position);
     }
 
-    /// <summary>
-    /// Checks if a position has robot scent (prevents robots from falling off)
-    /// </summary>
+    // Returns true if the position has a scent
     public bool HasScent(Position position)
     {
         return _scents.Contains(position);

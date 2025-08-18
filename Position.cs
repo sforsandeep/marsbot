@@ -1,6 +1,5 @@
 namespace Marsbot;
-// Simple struct for coordinates
-
+// Represents a position on the grid
 public readonly struct Position
 {
     public int X { get; }
@@ -12,6 +11,7 @@ public readonly struct Position
         Y = y;
     }
 
+    // Returns position as "X Y" string
     public override string ToString() => $"{X} {Y}";
 }
 
