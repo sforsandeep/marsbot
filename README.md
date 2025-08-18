@@ -7,8 +7,8 @@ This project is an implementation of the classic **Martian Robots coding challen
 - **Program.cs** — Entry point, handles input, validation, and simulation loop.
 - **Robot.cs** — Robot logic (turning, moving, lost state).
 - **Grid.cs** — Grid boundaries and scent tracking.
-- **Position.cs** — Immutable struct representing coordinates.
-- **Direction.cs** — Enum and helpers for turning/moving directions.
+- **Position.cs** — Struct representing coordinates.
+- **Direction.cs** — Enum and extensions for turning/moving directions.
 
 ## Requirements
 
