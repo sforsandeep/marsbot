@@ -2,6 +2,20 @@
 
 This project is an implementation of the classic **Martian Robots coding challenge**. Robots move on a rectangular grid, following sequences of instructions. If a robot leaves the grid, it is marked as _LOST_ and leaves a scent that prevents later robots from repeating the same mistake.
 
+## Tech Choices
+
+- **Language:** C# was chosen for its strong typing, performance, and suitability for console applications.
+- **Structure:** The solution is split into clear classes for grid, robot, position, and direction to keep logic organized and maintainable.
+- **Extension Methods:** Used for direction logic to keep code modular and readable.
+- **No UI:** The program is a console app, focused only on the requirements for simplicity and clarity.
+
+## Problem Approach
+
+- The grid is modeled as a class that tracks boundaries and scent positions where robots are lost.
+- Robots are simulated step-by-step, following instructions and updating their position and orientation.
+- Scent logic prevents robots from getting lost at the same spot as previous robots.
+- Input is parsed from the console or file, supporting flexible usage and easy testing.
+
 ## Project Structure
 
 - **Program.cs** — Entry point, handles input, validation, and simulation loop.
