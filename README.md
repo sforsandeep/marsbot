@@ -95,11 +95,23 @@ If you prefer not to build from source, download the latest prebuilt binary from
 
 1. Download the archive from **Releases**.
 2. Unzip.
-3. Prepare an `input.txt` with your test case (see _Input Format_ above), or place an `instructions.txt` next to the executable for fallback.
+3. Prepare an `input.txt` with your test case (see _Input Format_ above), or place an `instructions.txt` next to the executable for fallback. There is a default instructionx.txt already there which you can modify for updating the instructions. Or can manually enter the instructions when prompted.
 4. Run:
 
    ```cmd
    marsbot.exe < input.txt
    ```
 
-> The program prints only the required final lines to **stdout**. Any interactive hints (if present) are written to **stderr** and won’t affect automated comparisons.
+   or
+
+   ```cmd
+   marsbot.exe < input.txt >output.txt
+   ```
+
+or
+
+```cmd
+marsbot.exe
+```
+
+which will prompts for input or fallback into instructions.txt if no input
