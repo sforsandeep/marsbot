@@ -93,27 +93,13 @@ If you prefer not to build from source, download the latest prebuilt binary from
 
 **How to use the release:**
 
-1. Download the archive for your OS (Windows/Linux/macOS) from **Releases**.
+1. Download the archive from **Releases**.
 2. Unzip.
 3. Prepare an `input.txt` with your test case (see _Input Format_ above), or place an `instructions.txt` next to the executable for fallback.
 4. Run:
 
-   - **Windows (CMD):**
-
-     ```cmd
-     marsbot.exe < input.txt
-     ```
-
-   - **PowerShell:**
-
-     ```powershell
-     Get-Content input.txt | ./marsbot.exe
-     ```
-
-   - **Linux/macOS:**
-
-     ```bash
-     ./marsbot < input.txt
-     ```
+   ```cmd
+   marsbot.exe < input.txt
+   ```
 
 > The program prints only the required final lines to **stdout**. Any interactive hints (if present) are written to **stderr** and won’t affect automated comparisons.
